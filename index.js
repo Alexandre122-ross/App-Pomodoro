@@ -134,6 +134,10 @@ const updateClock = () => {
       pomConfig.workMinutes = pomConfig.workTime;
       pomConfig.workSeconds = 0;
       pomConfig.breakCouter = 0; 
+
+      // Chnage UI
+      getStartBtn.classList.add('d-hidden');
+      getStopBtn.classList.add('d-hidden');
     }
   }
 };
