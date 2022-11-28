@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title> Pomodoro - App </title>
+  <!-- Style -->
+  <link rel='stylesheet' href='index.css'>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/d1caeaa7f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <div class='wrapper d-center'>
+    <div class='pomodoro_state-container d-center'>
+      <div class="card_pomodoro_state-container d-center is-holder">
+        <h2 class='title-text'> Work Time </h2>
+      </div>
+      <div class="card_pomodoro_state-container d-center">
+        <h2 class='title-text'> Rest Time </h2>
+      </div>
+    </div>
+    <div class='clock_time-container d-center title-text'>
+      <h1 id='minutes-data'>00</h1>
+      <span>:</span>
+      <h1 id='seconds-data'>00</h1>
+    </div>
+    <div class='action_clock-container d-center'>
+      <button type='button' class='btn-container' id='start-btn'> <i class="fa-solid fa-play"></i> </button>
+      <button type='button' class='btn-container d-hidden' id='stop-btn'> <i class="fa-solid fa-pause"></i> </button>
+      <button type='button' class='btn-container d-hidden' id='break-btn'> <i class="fa-solid fa-rotate-right"></i> </button>
+    </div>
+  </div>
+
+  <script src='index.js'></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --dark-blue: #333853;
+  --light-blue: #3C4262;
+  --main_color-text: #b6babe;
+  --green: #219653;
+  --yellow: #F2C94C;
+}
+
+/* rgb(79, 189, 217); */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--main_color-text);
+}
+
+/* Utilits - Beguiner */
+
+.d-flex { display: flex; }
+
+.d-hidden { display: none; }
+
+.d-center { 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text { 
+  font-size: 2.5rem; 
+  font-weight: 600;
+}
+
+.btn-container {
+  background-color: var(--light-blue);
+  box-shadow: 1.5px 2px 4px rgba(0, 0, 0, .6);
+  color: inherit;
+  border: 3px solid var(--dark-blue);
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  height: 60px;
+  width: 100%;
+  max-width: 250px;
+  transition: background-color .35s;
+}
+
+.btn-container:hover { background-color: #333852; }
+
+.wrapper { 
+  flex-direction: column; 
+  margin: auto;
+  height: 100vh;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.wrapper .pomodoro_state-container { 
+  margin-bottom: 1rem;
+  width: 100%; 
+}
+
+.pomodoro_state-container .card_pomodoro_state-container {
+  border: 1.5px solid var(--main_color-text);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  height: 45px;
+  width: 150px;
+  transition: all .35s;
+}
+
+.pomodoro_state-container .card_pomodoro_state-container h2 { font-size: inherit }
+
+.pomodoro_state-container .card_pomodoro_state-container:first-child { margin-right: 1rem; }
+
+.pomodoro_state-container .is-active {
+  color: var(--green); 
+  border-color: var(--green);
+}
+
+.pomodoro_state-container .is-holder {
+  color: var(--yellow); 
+  border-color: var(--yellow);
+}
+
+.clock_time-container span { margin: 0 .25rem; }
+
+.wrapper .action_clock-container {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.action_clock-container .btn-container:last-child { margin: 0 1rem; }
+
+@media (max-width: 600px) {
+  .wrapper .action_clock-container { flex-direction: column; }
+  
+  .action_clock-container .btn-container:not(:first-child):not(:last-child) { margin: 1rem 0; }
+}
